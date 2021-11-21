@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+/*Home*/
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+    letter-spacing: 2px;
+    list-style-type: none;
+}
+
+.menu {
+    display: none;
+}
+
+/*Products*/
+.products {
+    cursor: pointer;
+}
+
+.table-center {
+    margin: auto;
+}
+
+.db-products {
+    border-collapse: collapse;
+    width: 100%; 
+}
+
+tr input {
+    width: 100%;
+    border-style: none;
+    outline-style: none;
+}
+
+.table-center input {
+    border-style: solid;
+
+}
+
+.td-flex {
+    margin: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    border-style: none;
+    outline-style: none;
+}
+
+.btn {
+    margin: 0 1px 0 1px;
+}
+
+.center-form {
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+    nav ul {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    body {
+        overflow-x: hidden;
+    }
+    nav ul {
+        position: absolute;
+        top: 8vh;
+        right: 0px;
+        height: 92vh;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: cornsilk;
+        transform: translateX(100%);
+    }
+    .menu {
+        font-size: 20px;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    table .btn {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    table {
+        font-size: 10px;
+    }
+
+    table .btn {
+        height: 10px;
+        width: 10px;
+    }
+}
+
+.menu-active {
+    z-index: 99999;
+    transform: translateX(0%);
+    transition: transform .5s ease-in;
+    display: flex;
+}
+
+.input-active {
+    /*input becomes active class*/
+    color: violet;
+}
+
+.inactive {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.carousel-item {
+    height: 300px;
+    background-color: gray;
+}
